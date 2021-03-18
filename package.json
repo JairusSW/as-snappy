@@ -1,0 +1,45 @@
+{
+  "scripts": {
+    "asbuild:untouched": "asc ./node_modules/as-bind/lib/assembly/as-bind.ts assembly/index.ts --target debug --runtime incremental --exportRuntime",
+    "asbuild:optimized": "asc ./node_modules/as-bind/lib/assembly/as-bind.ts assembly/index.ts --target release --runtime incremental --exportRuntime",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized",
+    "test": "node tests"
+  },
+  "dependencies": {
+    "@assemblyscript/loader": "^0.18.11",
+    "@types/node": "^14.14.31",
+    "as-bind": "^0.6.1",
+    "as-bitray": "^2.4.1",
+    "as-console": "^3.0.0",
+    "benny": "^3.6.15",
+    "bitray": "^2.0.8",
+    "snappyjs": "^0.6.0"
+  },
+  "devDependencies": {
+    "as-big": "^0.1.2",
+    "assemblyscript": "^0.18.11"
+  },
+  "name": "as-snappy",
+  "version": "1.0.0",
+  "description": "Snappy Compression For AssemblyScript",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "keywords": [
+    "assemblyscript",
+    "snappy",
+    "compress",
+    "decompress"
+  ],
+  "author": "JairusSW",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JairusSW/as-snappy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JairusSW/as-snappy/issues"
+  },
+  "homepage": "https://github.com/JairusSW/as-snappy#readme"
+}
